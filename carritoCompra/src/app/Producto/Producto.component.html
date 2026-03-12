@@ -1,0 +1,15 @@
+<div class="tabla-productos">
+
+
+
+  <!-- Filas -->
+    <div class="fila">
+      <span>{{producto.id}}</span>
+      <span>{{producto.nombre}}</span>
+      <span>{{producto.precio}} €</span>
+
+      <button class="add" (click)="addToCarrito($event)">
+        Añadir al carrito
+      </button>
+    </div>
+</div>

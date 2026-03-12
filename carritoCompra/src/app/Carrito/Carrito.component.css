@@ -1,0 +1,27 @@
+.productosCarrito{
+    width: 600px;
+    display: grid;
+    grid-template-columns: 50% 10% 30% 10%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin-top: 5px;
+}
+
+.cantidad{
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.add{
+  background-color: rgb(243, 173, 108);
+}
+
+.encabezado{
+    width: 600px;
+    display: grid;
+    font-weight: bold;
+    grid-template-columns: 50% 10% 30%;
+    border-bottom: 1px solid;
+
+}

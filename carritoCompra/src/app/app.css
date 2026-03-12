@@ -1,0 +1,7 @@
+.encabezado{
+  width: 100%;
+  display: grid;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  grid-template-columns: 10% 50% 20% 20%;
+}

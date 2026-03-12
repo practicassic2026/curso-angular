@@ -1,0 +1,52 @@
+Viendo que estás en el tema de comunicación entre componentes, decoradores y servicios, te propongo este ejercicio:
+
+---
+
+## 🛒 Mini Carrito de Compras
+
+**Objetivo:** Practicar `@Input`, `@Output`, servicios y directivas en un contexto realista.
+
+---
+
+### Estructura de componentes
+
+```
+AppComponent
+├── ProductoComponent      (recibe producto via @Input, emite evento @Output)
+└── CarritoComponent       (muestra los productos añadidos)
+```
+
+---
+
+### Lo que tendrás que implementar
+
+**1. Modelo** — crea una interfaz `Producto` con: `id`, `nombre`, `precio`.
+
+**2. ProductoComponent**
+- Recibe un `Producto` via `@Input()`
+- Tiene un botón "Añadir al carrito"
+- Emite el producto hacia el padre via `@Output()` + `EventEmitter`
+
+**3. AppComponent**
+- Tiene un array de productos hardcodeados
+- Usa `@for` para renderizar varios `ProductoComponent`
+- Escucha el evento del hijo y llama al servicio
+
+**4. CarritoService**
+- Array interno de productos añadidos
+- Métodos: `añadir(producto)`, `obtenerProductos()`, `calcularTotal()`
+
+**5. CarritoComponent**
+- Inyecta el servicio
+- Muestra la lista de productos en el carrito
+- Muestra el precio total
+- Usa `@if` para mostrar "Carrito vacío" si no hay productos
+
+---
+
+### Reto extra opcional 🎯
+Añade un botón "Eliminar" en cada producto del carrito y un contador de ítems visible en todo momento en el `AppComponent`.
+
+---
+
+¿Quieres que te dé una estructura de archivos inicial para arrancar, o prefieres intentarlo solo y que te ayude si te atascas?

@@ -1,0 +1,38 @@
+  <div>
+    <br/>
+    @if(getProductos().length === 0){
+      <span>🛒 Carrito vacío.</span>
+    }@else {
+      <span>🛒 Carrito</span>
+    }
+    <br/>
+    <span>-----------------------</span>
+
+  </div>
+
+  @if(getProductos().length !== 0){
+
+    <div class="encabezado">
+      <span>Producto</span>
+      <span>Precio</span>
+      <span style="text-align: center;">Cantidad</span>
+
+    </div>
+  }
+
+
+  
+<div class = "productosCarrito">
+      @for(p of getProductos(); track p.id){
+        <span>{{p.nombre}} </span>
+        <span>{{p.precio}} €</span>
+        <label class="cantidad">{{(getCantidad)}}</label>
+        <button class="add" (click)="addProduct(p)"> + </button>
+    }
+
+</div>
+
+@if(getProductos().length !== 0){
+      <p>-----------------------</p>
+      <p><span style="font-weight: bold;">Total: </span>: {{getTotal()}} €</p>
+    }
