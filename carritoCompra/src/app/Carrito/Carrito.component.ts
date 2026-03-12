@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarritoService } from '../Carrito.service';
 import { Producto } from '../Producto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -11,7 +12,7 @@ import { Producto } from '../Producto';
 })
 export class CarritoComponent {
 
-  constructor(private servicioCarrito : CarritoService) {
+  constructor(private servicioCarrito : CarritoService, private router:Router) {
     
    }
 
@@ -21,6 +22,7 @@ export class CarritoComponent {
 
   }
 
+  //Devuelve la suma de los precios de los productos de la cesta.
   getTotal(){
     return this.servicioCarrito.getTotal();
   }
@@ -29,8 +31,14 @@ export class CarritoComponent {
     
   }
 
+  //Añade un producto a la cesta.
   addProduct(p:Producto){
 
+  }
+
+  //Al pulsar el botón "Home" se llama a este metodo y lo redirige.
+  goHome(){
+    this.router.navigate(['home']);
   }
 
   vacio = true;

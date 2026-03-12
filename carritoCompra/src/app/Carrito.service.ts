@@ -20,6 +20,7 @@ constructor() { }
 
   }
 
+  //Devuelve la suma de los precios de los productos de la cesta.
   getTotal(){
     return this.productosCarrito.reduce((total,p) => total + p.precio, 0);
     

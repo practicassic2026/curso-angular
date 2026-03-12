@@ -1,1 +1,15 @@
-<p>home works!</p>
+<h1 style="text-align: center; font-weight: bold;">SUPERMERCADO</h1>
+
+  <!-- Encabezado -->
+  <div class="encabezado">
+    <span style="margin-left: 7px;">ID</span>
+    <span>Nombre del producto</span>
+    <span>Precio</span>
+    <span style="text-align: center;">Acción</span>
+  </div>
+
+@for(produ of Productos; track produ.id){
+
+  <app-producto [producto]="produ" (productoEmitido)="onProductoAdded($event)"></app-producto>
+}
+

@@ -1,0 +1,38 @@
+.encabezado{
+    height: 100vh;
+}
+
+.a{
+    display: flex;
+    justify-content: center;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 800px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+th {
+  background-color: lightgray;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    padding:15px;
+}
+
+input{
+    margin-right: 15px;
+}
+
+button{
+    margin-right: 15px;
+
+}
