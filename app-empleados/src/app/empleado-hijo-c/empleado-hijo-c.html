@@ -1,0 +1,29 @@
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Cargo</th>
+          <th>Salario</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>{{indic + 1}}</td>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.cargo}}</td>
+            <td>{{empleado.salario}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <app-caracteristicas-empleado-c (caracteristicasEmpleados)="agregarCaracteristica($event)"> </app-caracteristicas-empleado-c>
+<ul style="list-style: none;">
+    @for (caracteristica of arrayCaracteristicas; track caracteristica ){
+        <li> {{caracteristica}} </li>
+    }
+</ul>
+

@@ -1,0 +1,40 @@
+<h1 style="text-align:center"> CALCULADORA </h1>
+
+<br/>
+<br/>
+
+<div class="contenedor">
+
+  <input type="number" #nUno>
+
+  <input type="number" #nDos>
+
+</div>
+
+<br/>
+<br/>
+
+<div class="signosUno">
+
+  <input type="button" value="X" (click)="Multiplicar(nUno.valueAsNumber, nDos.valueAsNumber)">
+  <input type="button" value="+" (click)="Sumar(nUno.valueAsNumber, nDos.valueAsNumber)">
+
+</div>
+
+<br/>
+
+<div class="signosDos">
+
+  <input type="button" value="-" (click)="Restar(nUno.valueAsNumber, nDos.valueAsNumber)">
+  <input type="button" value="/" (click)="Dividir(nUno.valueAsNumber, nDos.valueAsNumber)">
+
+</div>
+
+<br/>
+<br/>
+
+<div class="resultado">
+
+  <input style="width:300px; height:100px; text-align: center;" type="text" value= {{resultado}} disabled >
+
+</div>
