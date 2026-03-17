@@ -36,3 +36,9 @@ button{
     margin-right: 15px;
 
 }
+
+button.del{
+  background-color: crimson;
+  float:right;
+}
+

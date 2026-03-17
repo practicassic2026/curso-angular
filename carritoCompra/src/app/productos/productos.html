@@ -14,9 +14,14 @@
             <tbody>
                 @for(producto of Productos; track producto){
                     <tr>
-                    <td>{{producto.id}}</td>
-                    <td>{{producto.nombre}}</td>
-                    <td>{{producto.precio}} €</td>
+                        <td>{{producto.id}}</td>
+                        <td>{{producto.nombre}}</td>
+                        <td>
+                            <div class="precio-btn">
+                            <span>{{producto.precio}} €</span>
+                            <button class="del" (click)="deleteProduct(producto.id)">-</button>
+                            </div>
+                        </td>
                     </tr>
                 }
             </tbody>
@@ -25,9 +30,9 @@
     </div>
 
     <div class="form">
-        Nombre del producto: <input type="text" >
-        Precio: <input type="number">
-       <button>Crear producto</button>
+        Nombre del producto: <input type="text" [(ngModel)]="nombre">
+        Precio: <input type="number" [(ngModel)]="precio">
+       <button (click)="createProduct(nombre, precio)">Crear producto</button>
     </div>
 
 </div>

@@ -27,13 +27,22 @@ export class CarritoComponent {
     return this.servicioCarrito.getTotal();
   }
 
-  getCantidad(){
-    
+  getCantidad(id:number){
+    for (let p of this.servicioCarrito.getProducts()){
+      if (p.id === id){
+        return p.cantidad;
+      }
+    }
   }
 
   //Añade un producto a la cesta.
-  addProduct(p:Producto){
+  addProduct(id:number){
+    this.servicioCarrito.addCantidad(id);
+  }
 
+  //Elimina un producto de la cesta.
+  delProduct(id:number){
+    this.servicioCarrito.reduceCantidad(id);
   }
 
   //Al pulsar el botón "Home" se llama a este metodo y lo redirige.

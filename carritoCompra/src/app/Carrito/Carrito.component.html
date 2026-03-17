@@ -26,8 +26,10 @@
       @for(p of getProductos(); track p.id){
         <span>{{p.nombre}} </span>
         <span>{{p.precio}} €</span>
-        <label class="cantidad">{{(getCantidad)}}</label>
-        <button class="add" (click)="addProduct(p)"> + </button>
+        <label class="cantidad">{{(getCantidad(p.id))}}</label>
+        <button class="add-del" (click)="addProduct(p.id)"> + </button>
+        <button class="add-del" (click)="delProduct(p.id)"> - </button>
+
     }
 
 </div>

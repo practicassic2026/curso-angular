@@ -1,7 +1,7 @@
 .productosCarrito{
     width: 600px;
     display: grid;
-    grid-template-columns: 50% 10% 30% 10%;
+    grid-template-columns: 50% 10% 20% 10% 10%;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     margin-top: 5px;
@@ -13,7 +13,7 @@
     background-color: lightgray;
 }
 
-.add{
+.add-del{
   background-color: rgb(243, 173, 108);
 }
 

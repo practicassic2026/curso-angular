@@ -4,8 +4,8 @@
 
   <!-- Filas -->
     <div class="fila">
-      <span>{{producto.id}}</span>
-      <span>{{producto.nombre}}</span>
+      <span >{{producto.id}}</span>
+      <span (click)="goUpdateProducto(producto.id)">{{producto.nombre}}</span>
       <span>{{producto.precio}} €</span>
 
       <button class="add" (click)="addToCarrito($event)">

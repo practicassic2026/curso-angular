@@ -3,6 +3,7 @@ import { Home } from './Home/home';
 import { Quienes } from './Quienes/quienes';
 import { CarritoComponent } from './Carrito/Carrito.component';
 import { Productos } from './productos/productos';
+import { UpdateProductoComponent } from './UpdateProducto/UpdateProducto.component';
 
 
 export const routes: Routes = [  
@@ -10,4 +11,5 @@ export const routes: Routes = [
   {path: 'home', component:Home},
   {path: 'quienes', component:Quienes},
   {path: 'productos', component:Productos},
-  {path: 'carrito', component:CarritoComponent},];
+  {path: 'carrito', component:CarritoComponent},
+  {path: 'editar-producto/:id', component:UpdateProductoComponent}];
